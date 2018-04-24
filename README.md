@@ -72,7 +72,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **[Edson Junior](https://github.com/edson-junior)** - author
+* **[Willian Justen](https://github.com/willianjusten)** - author of the [course](https://www.udemy.com/js-com-tdd-na-pratica/) and starter files
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
