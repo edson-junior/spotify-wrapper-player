@@ -10,7 +10,7 @@
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
-    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "test:tdd": "npm run test -- --watch",
     "test:coverage": "nyc npm test",
     "start": "./node_modules/.bin/webpack-dev-server -d"
   },
