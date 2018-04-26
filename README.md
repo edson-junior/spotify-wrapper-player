@@ -75,7 +75,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 * **[Edson Junior](https://github.com/edson-junior)** - author
 * **[Willian Justen](https://github.com/willianjusten)** - author of the [course](https://www.udemy.com/js-com-tdd-na-pratica/) and starter files
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/edson-junior/spotify-wrapper-player/contributors) who participated in this project.
 
 ## License
 
