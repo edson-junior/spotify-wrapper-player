@@ -1,6 +1,6 @@
 # Project Title
 
-One Paragraph of project description goes here
+> This application uses [spotify-wrapper](https://github.com/willianjusten/spotify-wrapper) library to get informations and musics from Spotify.
 
 ## Getting Started
 
