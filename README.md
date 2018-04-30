@@ -6,8 +6,6 @@ Small music player for spotify's samples.
 
 > This application uses [spotify-wrapper](https://github.com/willianjusten/spotify-wrapper) library to get informations and songs from Spotify.
 
-
-
 ### How to Run
 
 First go to Spotify Developers API and create your [Token](https://developer.spotify.com/console/get-search-item/). **Remember that the token will expire in 60min**
@@ -41,33 +39,21 @@ End with an example of getting some data out of the system or using it for a lit
 
 ## Running the tests
 
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
-
+You can run the Unit tests by typing:
 ```
-Give an example
+npm run test
 ```
 
-### And coding style tests
-
-Explain what these tests test and why
+or
 
 ```
-Give an example
+npm run test:tdd
 ```
 
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* Dropwizard - Bla bla bla
-* Maven - Maybe
-* Atom - ergaerga
+To see code coverage, run:
+```
+npm run test:coverage
+```
 
 ## Contributing
 
@@ -90,6 +76,4 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+* **[Willian Justen](https://github.com/willianjusten)** - for creating this awesome tdd course
