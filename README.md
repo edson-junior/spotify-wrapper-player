@@ -6,32 +6,19 @@ Small music player for spotify's samples.
 
 > This application uses [spotify-wrapper](https://github.com/willianjusten/spotify-wrapper) library to get informations and songs from Spotify.
 
-## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisities
+### How to Run
 
-What things you need to install the software and how to install them
+First go to Spotify Developers API and create your [Token](https://developer.spotify.com/console/get-search-item/). Then add your token on src/spotify.js. **Remember that the token will expire in 60min**
 
+Install the dependencies:
 ```
-Give examples
+npm i
 ```
-
-### Installing
-
-A step by step series of examples that tell you have to get a development env running
-
-Say what the step will be
-
+Run your application:
 ```
-Give the example
-```
-
-And repeat
-
-```
-until finished
+npm start
 ```
 
 End with an example of getting some data out of the system or using it for a little demo
