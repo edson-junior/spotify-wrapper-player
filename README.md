@@ -1,6 +1,8 @@
-# Project Title
+# spotify-wrapper-player
 
-> This application uses [spotify-wrapper](https://github.com/willianjusten/spotify-wrapper) library to get informations and musics from Spotify.
+Small music player for spotify's samples.
+
+> This application uses [spotify-wrapper](https://github.com/willianjusten/spotify-wrapper) library to get informations and songs from Spotify.
 
 ## Getting Started
 
