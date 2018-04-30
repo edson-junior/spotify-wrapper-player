@@ -2,6 +2,8 @@
 
 Small music player for spotify's samples.
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md)
+
 ![Screen Shot](https://github.com/willianjusten/spotify-wrapper-player/blob/master/example/screenshot.png "Screen Shot")
 
 > This application uses [spotify-wrapper](https://github.com/willianjusten/spotify-wrapper) library to get informations and songs from Spotify.
