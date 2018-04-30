@@ -10,7 +10,23 @@ Small music player for spotify's samples.
 
 ### How to Run
 
-First go to Spotify Developers API and create your [Token](https://developer.spotify.com/console/get-search-item/). Then add your token on src/spotify.js. **Remember that the token will expire in 60min**
+First go to Spotify Developers API and create your [Token](https://developer.spotify.com/console/get-search-item/). **Remember that the token will expire in 60min**
+
+```javascript
+// first import the heart of this app, spotify-wrapper:
+import SpotifyWrapper from 'spotify-wrapper';
+
+// then create an instance of it, with your Token
+const spotify = new SpotifyWrapper({
+  token: 'YOUR_TOKEN_HERE',
+});
+
+// Go nuts!
+const albums = spotify.search.albums('Incubus');
+
+albums.then(data => console.log(data))
+
+```
 
 Install the dependencies:
 ```
