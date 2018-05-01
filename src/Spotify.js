@@ -1,8 +1,10 @@
+/* eslint no-undef: "error" */
+/* eslint-env browser */
 
 import SpotifyWrapper from 'spotify-wrapper';
 
 const spotify = new SpotifyWrapper({
-  token: AppSettings.token,
+  token: window.AppSettings.token,
 });
 
 export default spotify;
