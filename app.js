@@ -1,19 +1,9 @@
-/**
- * This is an example of a basic node.js script that performs
- * the Client Credentials oAuth2 flow to authenticate against
- * the Spotify Accounts.
- *
- * For more information, read
- * https://developer.spotify.com/web-api/authorization-guide/#client_credentials_flow
- */
-
-var request = require('request'); // "Request" library
-
-var client_id = 'client_id'; // Your client id
-var client_secret = 'client_secret'; // Your secret
+const request = require('request'); // "Request" library
+const client_id = 'client_id'; // Your client id
+const client_secret = 'client_secret'; // Your secret
 
 // your application requests authorization
-var authOptions = {
+const authOptions = {
   url: 'https://accounts.spotify.com/api/token',
   headers: {
     'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64'))
@@ -24,20 +14,20 @@ var authOptions = {
   json: true
 };
 
-request.post(authOptions, function(error, response, body) {
+request.post(authOptions, (error, response, body) => {
   if (!error && response.statusCode === 200) {
 
     // use the access token to access the Spotify Web API
     const token = body.access_token;
-
-    var options = {
+    const options = {
       url: 'https://api.spotify.com/v1/users/edsondjr',
       headers: {
         'Authorization': 'Bearer ' + token
       },
       json: true
     };
-    request.get(options, function(error, response, body) {
+
+    request.get(options, (error, response, body) => {
       // @TODO figure out a way of passing the tocken to html page
       console.log(token);
     });
