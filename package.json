@@ -7,13 +7,16 @@
     "clear": "rimraf lib",
     "build": "npm run clear && ./node_modules/.bin/babel --out-dir lib src",
     "build:watch": "npm run build -- --watch",
+    "dev:server": "./node_modules/.bin/nodemon start.js",
+    "dev:webpack": "./node_modules/.bin/webpack --colors --display-error-details --config webpack.config.js -d -w",
+    "dev": "concurrently --names \"webpack,nodemon\" --prefix name \"npm run dev:webpack\" \"npm run dev:server\" --prefix-colors green",
     "lint": "./node_modules/.bin/eslint src/*.js",
     "lint:watch": "./node_modules/.bin/esw src/*.js --no-ignore -w",
     "prepush": "npm run lint",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
     "test:tdd": "concurrently --names \"tdd,eslint\" --prefix name \"npm run test -- --watch\" \"npm run lint:watch\" --prefix-colors green",
     "test:coverage": "nyc npm test",
-    "start": "./node_modules/.bin/webpack-dev-server -d"
+    "start": "./node_modules/.bin/node start.js"
   },
   "nyc": {
     "reporter": [
@@ -54,6 +57,7 @@
     "jsdom": "^11.9.0",
     "jsdom-global": "^3.0.2",
     "mocha": "^5.1.1",
+    "nodemon": "^1.17.3",
     "nyc": "^11.7.1",
     "rimraf": "^2.6.1",
     "webpack": "^4.6.0",
@@ -61,6 +65,8 @@
     "webpack-dev-server": "^3.1.3"
   },
   "dependencies": {
+    "dotenv": "^5.0.1",
+    "ejs": "^2.5.9",
     "request": "^2.85.0",
     "save": "^2.3.2",
     "spotify-wrapper": "^2.0.5"

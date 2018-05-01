@@ -10,9 +10,6 @@ module.exports = {
     filename: 'bundle.js',
     path: path.resolve(__dirname, './example'),
   },
-  devServer: {
-    contentBase: path.resolve(__dirname, './example'),
-  },
   module: {
     rules: [
       {
