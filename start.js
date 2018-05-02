@@ -1,6 +1,6 @@
 const express = require('express')
 const path = require('path')
-const request = require('request'); // "Request" library
+const request = require('request-promise'); // "Request" library
 const app = express()
 
 // import environmental variables from our variables.env file
@@ -15,12 +15,11 @@ app.set('view engine', 'ejs')
 app.use(express.static(path.join(__dirname, 'example')))
 
 // homepage
-app.get('/', (req, res) => {
-  const client_id = process.env.CLIENT_ID; // Your client id
-  const client_secret = process.env.CLIENT_SECRET; // Your secret
-
-  // your application requests authorization
+app.get('/', async (req, res) => {
+  const client_id = process.env.CLIENT_ID;
+  const client_secret = process.env.CLIENT_SECRET;
   const authOptions = {
+    method: 'POST',
     url: 'https://accounts.spotify.com/api/token',
     headers: {
       'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64'))
@@ -31,15 +30,13 @@ app.get('/', (req, res) => {
     json: true
   };
 
-  request.post(authOptions, (error, response, body) => {
-    if (!error && response.statusCode === 200) {
-
-      // use the access token to access the Spotify Web API
-      const token = body.access_token;
+  await request(authOptions)
+    .then(data => {
+      const token = data.access_token;
 
       res.render('example', { token })
-    }
-  });
+    })
+    .catch(err => console.error(err))
 });
 
 // port

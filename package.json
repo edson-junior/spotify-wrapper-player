@@ -68,6 +68,7 @@
     "dotenv": "^5.0.1",
     "ejs": "^2.5.9",
     "request": "^2.85.0",
+    "request-promise": "^4.2.2",
     "save": "^2.3.2",
     "spotify-wrapper": "^2.0.5"
   }
