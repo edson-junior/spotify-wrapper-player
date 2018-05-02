@@ -1,7 +1,7 @@
-const express = require('express')
-const path = require('path')
-const request = require('request-promise'); // "Request" library
-const app = express()
+const express = require('express');
+const path = require('path');
+const request = require('request-promise');
+const app = express();
 
 // import environmental variables from our variables.env file
 require('dotenv').config({ path: 'variables.env' });
@@ -22,7 +22,7 @@ app.get('/', async (req, res) => {
     method: 'POST',
     url: 'https://accounts.spotify.com/api/token',
     headers: {
-      'Authorization': 'Basic ' + (new Buffer(client_id + ':' + client_secret).toString('base64'))
+      'Authorization': `Basic ${(new Buffer(client_id + ':' + client_secret).toString('base64'))}`
     },
     form: {
       grant_type: 'client_credentials'
