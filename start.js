@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const request = require('request-promise');
+const fetch = require('node-fetch');
 const app = express();
 
 // import environmental variables from our variables.env file
@@ -18,25 +18,19 @@ app.use(express.static(path.join(__dirname, 'example')))
 app.get('/', async (req, res) => {
   const client_id = process.env.CLIENT_ID;
   const client_secret = process.env.CLIENT_SECRET;
-  const authOptions = {
+
+  await fetch('https://accounts.spotify.com/api/token', {
+    body: 'grant_type=client_credentials',
     method: 'POST',
-    url: 'https://accounts.spotify.com/api/token',
     headers: {
-      'Authorization': `Basic ${(new Buffer(client_id + ':' + client_secret).toString('base64'))}`
-    },
-    form: {
-      grant_type: 'client_credentials'
-    },
-    json: true
-  };
-
-  await request(authOptions)
-    .then(data => {
-      const token = data.access_token;
-
-      res.render('example', { token })
-    })
-    .catch(err => console.error(err))
+      'Authorization': `Basic ${(new Buffer(client_id + ':' + client_secret).toString('base64'))}`,
+      'Content-Type': 'application/x-www-form-urlencoded',
+      'Accept':'application/json; charset=utf-8'
+    }
+  })
+    .then(data => data.json())
+    .then(data => res.render('example', { token: data.access_token }))
+    .catch(error => console.error(error));
 });
 
 // port
