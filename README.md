@@ -10,16 +10,19 @@ Small music player for spotify's samples.
 
 ### How to Run
 
-Install the dependencies:
+#### Prerequisites
+- Create an application on [Spotify](https://developer.spotify.com/dashboard/applications).
+- Copy Client ID and Client Secret.
+- Add both Client ID and Client Secret to your variables.env file and remove the ".example" at the end.
+
+#### Install the dependencies:
 ```
 npm i
 ```
-Run application:
+#### Run application:
 ```
 npm run dev
 ```
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
