@@ -7,12 +7,11 @@ const app = express();
 require('dotenv').config({ path: 'variables.env' });
 
 // view engine
-// @TODO: add example here later on
 app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 // static files
-app.use(express.static(path.join(__dirname, 'example')))
+app.use(express.static(path.join(__dirname, 'dist')))
 
 // homepage
 app.get('/', async (req, res) => {
@@ -29,7 +28,7 @@ app.get('/', async (req, res) => {
     }
   })
     .then(data => data.json())
-    .then(data => res.render('example', { token: data.access_token }))
+    .then(data => res.render('index', { token: data.access_token }))
     .catch(error => console.error(error));
 });
 
