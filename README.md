@@ -52,8 +52,8 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **[Edson Junior](https://github.com/edson-junior)**
-* **[Willian Justen](https://github.com/willianjusten)**
+* [Edson Junior](https://github.com/edson-junior)
+* [Willian Justen](https://github.com/willianjusten)
 
 ## License
 
