@@ -179,6 +179,18 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 
 /***/ }),
 
+/***/ "./PlaylistTrigger.js":
+/*!****************************!*\
+  !*** ./PlaylistTrigger.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\nexports.default = PlaylistTrigger;\n/* eslint-env browser */\n\nvar albumTracks = document.getElementById('album-tracks');\nvar audioObject = null;\n\nfunction PlaylistTrigger() {\n  albumTracks.addEventListener('click', function (e) {\n    var target = e.target.parentNode;\n\n    if (target.classList.contains('active')) {\n      audioObject.pause();\n    } else {\n      if (audioObject) {\n        audioObject.pause();\n      }\n\n      audioObject = new Audio(target.getAttribute('data-track-preview'));\n      audioObject.play();\n      target.classList.add('active');\n\n      audioObject.addEventListener('pause', function () {\n        target.classList.remove('active');\n      });\n    }\n  });\n}//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9QbGF5bGlzdFRyaWdnZXIuanMuanMiLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8vc3JjL1BsYXlsaXN0VHJpZ2dlci5qcz80MDE0Il0sInNvdXJjZXNDb250ZW50IjpbIi8qIGVzbGludC1lbnYgYnJvd3NlciAqL1xuXG5jb25zdCBhbGJ1bVRyYWNrcyA9IGRvY3VtZW50LmdldEVsZW1lbnRCeUlkKCdhbGJ1bS10cmFja3MnKTtcbmxldCBhdWRpb09iamVjdCA9IG51bGw7XG5cbmV4cG9ydCBkZWZhdWx0IGZ1bmN0aW9uIFBsYXlsaXN0VHJpZ2dlcigpIHtcbiAgYWxidW1UcmFja3MuYWRkRXZlbnRMaXN0ZW5lcignY2xpY2snLCAoZSkgPT4ge1xuICAgIGNvbnN0IHRhcmdldCA9IGUudGFyZ2V0LnBhcmVudE5vZGU7XG5cbiAgICBpZiAodGFyZ2V0LmNsYXNzTGlzdC5jb250YWlucygnYWN0aXZlJykpIHtcbiAgICAgIGF1ZGlvT2JqZWN0LnBhdXNlKCk7XG4gICAgfSBlbHNlIHtcbiAgICAgIGlmIChhdWRpb09iamVjdCkge1xuICAgICAgICBhdWRpb09iamVjdC5wYXVzZSgpO1xuICAgICAgfVxuXG4gICAgICBhdWRpb09iamVjdCA9IG5ldyBBdWRpbyh0YXJnZXQuZ2V0QXR0cmlidXRlKCdkYXRhLXRyYWNrLXByZXZpZXcnKSk7XG4gICAgICBhdWRpb09iamVjdC5wbGF5KCk7XG4gICAgICB0YXJnZXQuY2xhc3NMaXN0LmFkZCgnYWN0aXZlJyk7XG5cbiAgICAgIGF1ZGlvT2JqZWN0LmFkZEV2ZW50TGlzdGVuZXIoJ3BhdXNlJywgKCkgPT4ge1xuICAgICAgICB0YXJnZXQuY2xhc3NMaXN0LnJlbW92ZSgnYWN0aXZlJyk7XG4gICAgICB9KVxuICAgIH1cbiAgfSk7XG59XG4iXSwibWFwcGluZ3MiOiI7Ozs7O0FBS0E7QUFMQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBIiwic291cmNlUm9vdCI6IiJ9\n//# sourceURL=webpack-internal:///./PlaylistTrigger.js\n");
+
+/***/ }),
+
 /***/ "./SearchTrigger.js":
 /*!**************************!*\
   !*** ./SearchTrigger.js ***!
@@ -223,7 +235,7 @@ eval("\n\nObject.defineProperty(exports, \"__esModule\", {\n  value: true\n});\n
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("\n\nvar _SearchTrigger = __webpack_require__(/*! ./SearchTrigger */ \"./SearchTrigger.js\");\n\nvar _SearchTrigger2 = _interopRequireDefault(_SearchTrigger);\n\nvar _SelectAlbumTrigger = __webpack_require__(/*! ./SelectAlbumTrigger */ \"./SelectAlbumTrigger.js\");\n\nvar _SelectAlbumTrigger2 = _interopRequireDefault(_SelectAlbumTrigger);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _SearchTrigger2.default)();\n(0, _SelectAlbumTrigger2.default)();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9tYWluLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL3NyYy9tYWluLmpzPzJlZTIiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHNlYXJjaEVudGVyVHJpZ2dlciBmcm9tICcuL1NlYXJjaFRyaWdnZXInO1xuaW1wb3J0IHNlYXJjaEFsYnVtVHJpZ2dlciBmcm9tICcuL1NlbGVjdEFsYnVtVHJpZ2dlcic7XG5cbnNlYXJjaEVudGVyVHJpZ2dlcigpO1xuc2VhcmNoQWxidW1UcmlnZ2VyKCk7XG5cbiJdLCJtYXBwaW5ncyI6Ijs7QUFBQTtBQUNBOzs7QUFBQTtBQUNBOzs7OztBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./main.js\n");
+eval("\n\nvar _SearchTrigger = __webpack_require__(/*! ./SearchTrigger */ \"./SearchTrigger.js\");\n\nvar _SearchTrigger2 = _interopRequireDefault(_SearchTrigger);\n\nvar _SelectAlbumTrigger = __webpack_require__(/*! ./SelectAlbumTrigger */ \"./SelectAlbumTrigger.js\");\n\nvar _SelectAlbumTrigger2 = _interopRequireDefault(_SelectAlbumTrigger);\n\nvar _PlaylistTrigger = __webpack_require__(/*! ./PlaylistTrigger */ \"./PlaylistTrigger.js\");\n\nvar _PlaylistTrigger2 = _interopRequireDefault(_PlaylistTrigger);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\n(0, _SearchTrigger2.default)();\n(0, _SelectAlbumTrigger2.default)();\n(0, _PlaylistTrigger2.default)();//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiLi9tYWluLmpzLmpzIiwic291cmNlcyI6WyJ3ZWJwYWNrOi8vL3NyYy9tYWluLmpzPzJlZTIiXSwic291cmNlc0NvbnRlbnQiOlsiaW1wb3J0IHNlYXJjaEVudGVyVHJpZ2dlciBmcm9tICcuL1NlYXJjaFRyaWdnZXInO1xuaW1wb3J0IHNlYXJjaEFsYnVtVHJpZ2dlciBmcm9tICcuL1NlbGVjdEFsYnVtVHJpZ2dlcic7XG5pbXBvcnQgcGxheWxpc3RUcmlnZ2VyIGZyb20gJy4vUGxheWxpc3RUcmlnZ2VyJztcblxuc2VhcmNoRW50ZXJUcmlnZ2VyKCk7XG5zZWFyY2hBbGJ1bVRyaWdnZXIoKTtcbnBsYXlsaXN0VHJpZ2dlcigpO1xuXG4iXSwibWFwcGluZ3MiOiI7O0FBQUE7QUFDQTs7O0FBQUE7QUFDQTs7O0FBQUE7QUFDQTs7Ozs7QUFDQTtBQUNBO0FBQ0EiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./main.js\n");
 
 /***/ })
 
