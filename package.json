@@ -16,6 +16,7 @@
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
     "test:tdd": "concurrently --names \"tdd,eslint\" --prefix name \"npm run test -- --watch\" \"npm run lint:watch\" --prefix-colors green",
     "test:coverage": "nyc npm test",
+    "coveralls": "npm run test:coverage && nyc report --reporter=text-lcov | coveralls",
     "start": "./node_modules/.bin/node start.js"
   },
   "nyc": {
@@ -49,6 +50,7 @@
     "babel-register": "^6.24.0",
     "chai": "^4.1.2",
     "concurrently": "^3.5.1",
+    "coveralls": "^3.0.1",
     "css-loader": "^0.28.11",
     "eslint": "^4.0.0",
     "eslint-config-airbnb-base": "^12.1.0",
