@@ -2,7 +2,7 @@
 
 Small music player for spotify's samples.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md) [![Build Status](https://travis-ci.org/edson-junior/spotify-wrapper-player.svg?branch=master)](https://travis-ci.org/edson-junior/spotify-wrapper-player) [![Coverage Status](https://coveralls.io/repos/github/edson-junior/spotify-wrapper-player/badge.svg?branch=master)](https://coveralls.io/github/edson-junior/spotify-wrapper-player?branch=master)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE.md) [![Build Status](https://travis-ci.org/edson-junior/spotify-wrapper-player.svg?branch=master)](https://travis-ci.org/edson-junior/spotify-wrapper-player) [![Coverage Status](https://coveralls.io/repos/github/edson-junior/spotify-wrapper-player/badge.svg?branch=master)](https://coveralls.io/github/edson-junior/spotify-wrapper-player?branch=master) ![Dev Dependencies](https://david-dm.org/edson-junior/spotify-wrapper-player.svg)
 
 ![Screen Shot](https://github.com/willianjusten/spotify-wrapper-player/blob/master/example/screenshot.png "Screen Shot")
 
