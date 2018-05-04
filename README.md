@@ -52,15 +52,9 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **[Edson Junior](https://github.com/edson-junior)** - author
-* **[Willian Justen](https://github.com/willianjusten)** - author of the [course](https://www.udemy.com/js-com-tdd-na-pratica/) and [starter files](https://github.com/willianjusten/js-tdd-course)
-
-See also the list of [contributors](https://github.com/edson-junior/spotify-wrapper-player/contributors) who participated in this project.
+* **[Edson Junior](https://github.com/edson-junior)**
+* **[Willian Justen](https://github.com/willianjusten)**
 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* **[Willian Justen](https://github.com/willianjusten)** - for creating this awesome tdd course
