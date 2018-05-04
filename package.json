@@ -4,9 +4,8 @@
   "description": "Small spotify player build on top of the spotify-wrapper plugin",
   "main": "index.js",
   "scripts": {
-    "clear": "rimraf lib",
-    "build": "npm run clear && ./node_modules/.bin/babel --out-dir lib src",
-    "build:watch": "npm run build -- --watch",
+    "clear": "rimraf dist",
+    "build": "npm run clear && ./node_modules/.bin/webpack --display-error-details --config webpack.config.js -p",
     "dev:server": "./node_modules/.bin/nodemon start.js",
     "dev:webpack": "./node_modules/.bin/webpack --colors --display-error-details --config webpack.config.js -d -w",
     "dev": "concurrently --names \"webpack,nodemon\" --prefix name \"npm run dev:webpack\" \"npm run dev:server\" --prefix-colors green",
