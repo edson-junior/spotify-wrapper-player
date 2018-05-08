@@ -22,7 +22,7 @@ app.get('/', async (req, res) => {
     body: 'grant_type=client_credentials',
     method: 'POST',
     headers: {
-      'Authorization': `Basic ${(new Buffer(client_id + ':' + client_secret).toString('base64'))}`,
+      'Authorization': `Basic ${(new Buffer(`${client_id}:${client_secret}`).toString('base64'))}`,
       'Content-Type': 'application/x-www-form-urlencoded',
       'Accept':'application/json; charset=utf-8'
     }
