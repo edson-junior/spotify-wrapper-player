@@ -7,11 +7,11 @@ const app = express();
 require('dotenv').config({ path: 'variables.env' });
 
 // view engine
-app.set('views', path.join(__dirname, 'views'))
-app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
 // static files
-app.use(express.static(path.join(__dirname, 'dist')))
+app.use(express.static(path.join(__dirname, 'dist')));
 
 // homepage
 app.get('/', async (req, res) => {
@@ -33,8 +33,8 @@ app.get('/', async (req, res) => {
 });
 
 // port
-app.set('port', process.env.PORT || 7777)
+app.set('port', process.env.PORT || 7777);
 
 const server = app.listen(app.get('port'), () => {
-  console.log(`Express running → PORT ${server.address().port}`)
+  console.log(`Express running → PORT ${server.address().port}`);
 });
