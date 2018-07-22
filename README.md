@@ -1,4 +1,4 @@
-# spotify-wrapper-player
+# Spotify Wrapper Player
 
 🎵Music player for spotify's samples.
 
