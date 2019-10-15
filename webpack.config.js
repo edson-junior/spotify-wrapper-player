@@ -1,5 +1,5 @@
-const path = require('path')
-const webpack = require('webpack')
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   context: path.resolve(__dirname, './src'),
@@ -15,14 +15,16 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: [/node_modules/],
-        use: [{
-          loader: 'babel-loader',
-        }]
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+        ],
       },
       {
         test: /\.css$/,
-        use: ['style-loader', 'css-loader']
-      }
-    ]
-  }
-}
+        use: ['style-loader', 'css-loader'],
+      },
+    ],
+  },
+};

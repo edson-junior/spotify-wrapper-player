@@ -6,4 +6,3 @@ import './main.css';
 searchEnterTrigger();
 searchAlbumTrigger();
 playlistTrigger();
-

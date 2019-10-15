@@ -8,7 +8,8 @@ const searchInput = document.getElementById('search-input');
 const searchForm = document.getElementById('search-form');
 
 function makeRequest() {
-  spotify.search.albums(searchInput.value)
+  spotify.search
+    .albums(searchInput.value)
     .then(data => renderAlbums(data.albums.items, albumList));
 }
 
